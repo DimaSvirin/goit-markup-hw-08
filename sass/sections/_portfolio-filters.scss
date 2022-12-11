@@ -9,9 +9,19 @@
 /* FILTERS */
 
 .filters-list {
+
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: start;
+    row-gap: 15px;
+    margin-bottom: 40px;
+    @include tablet {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    @include desktop {
+        margin-bottom: 50px;
+    }
 }
 
 .filters-item {}

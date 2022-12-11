@@ -4,8 +4,19 @@
     padding: 60px 0;
     background: var(--background);
 }
+.ad-soc-form {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+}
 
-.address {}
+.address {
+    text-align: center;
+    margin-bottom: 60px;
+}
 
 .footer .logo {
     display: inline-block;
@@ -14,10 +25,6 @@
 .logo--footer {
     color: var(--color-white);
 }
-
-.footer-address {}
-
-.address-list {}
 
 .address-item:first-child {
     margin-top: 20px;
