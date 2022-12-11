@@ -1,0 +1,38 @@
+/* What we do? */
+
+
+.work-title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 50px;
+}
+
+.works {
+    display: flex;
+    gap: 30px;
+}
+
+.works__item {
+    position: relative;
+}
+
+.work__text {
+    @include df-aic;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
+    color: var(--color-white);
+}

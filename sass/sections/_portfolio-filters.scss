@@ -1,0 +1,45 @@
+/* PORTFOLIO */ 
+
+.portfolio {
+    background: var(--color-white);
+}
+
+.portfolio-title {}
+
+/* FILTERS */
+
+.filters-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filters-item {}
+
+.filters-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filters-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    color: var(--title-color);
+    background: var(--background-color);
+    border-radius: 4px;
+    border-color: transparent;
+
+    padding: 6px 25px;
+
+    transition: color var(--transition-d-tf),
+        background-color var(--transition-d-tf),
+        box-shadow var(--transition-d-tf);
+
+    &:hover,
+    &:focus {
+        color: var(--color-white);
+        background-color: var(--active-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}

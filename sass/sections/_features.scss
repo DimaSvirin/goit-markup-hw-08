@@ -1,0 +1,40 @@
+/* features */
+.features {
+    padding-bottom: 0;
+}
+
+.features__list {
+    display: flex;
+    gap: 30px;
+}
+
+.features__item {
+    width: 270px;
+}
+
+.features__decor {
+    @include df-aic;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 30px;
+
+    height: 120px;
+    background: var(--background-color);
+    border-radius: 4px;
+}
+
+
+.features__subtitle {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-color);
+
+    margin-bottom: 10px;
+}
+
+.features__text {
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--main-text-color);
+}

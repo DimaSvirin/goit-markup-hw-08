@@ -1,0 +1,22 @@
+@import './utils/vars';
+@import './utils/common-styles';
+@import './utils/reset';
+@import './utils/hide';
+@import './utils/mixins';
+
+@import './components/container-section';
+@import './components/btn';
+@import './components/modal';
+@import './components/modal-form';
+
+@import './sections/header';
+@import './sections/hero';
+@import './sections/features';
+@import './sections/works';
+@import './sections/team';
+@import './sections/clients';
+@import './sections/footer-address';
+@import './sections/footer-soc';
+@import './sections/footer-form';
+@import './sections/portfolio-filters';
+@import './sections/portfolio-cards';

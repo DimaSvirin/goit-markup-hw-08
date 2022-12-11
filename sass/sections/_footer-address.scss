@@ -1,0 +1,56 @@
+/* FOOTER AND ADDRESS */
+
+.footer {
+    padding: 60px 0;
+    background: var(--background);
+}
+
+.address {}
+
+.footer .logo {
+    display: inline-block;
+}
+
+.logo--footer {
+    color: var(--color-white);
+}
+
+.footer-address {}
+
+.address-list {}
+
+.address-item:first-child {
+    margin-top: 20px;
+}
+
+.address-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address-link-map {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--color-white);
+
+    transition: color var(--transition-d-tf);
+
+    &:hover,
+    &:focus {
+        color: var(--active-color);
+    }
+}
+
+.address-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    
+    transition: color var(--transition-d-tf);
+    
+    &:hover,
+    &:focus {
+        color: var(--active-color);
+    }
+}
