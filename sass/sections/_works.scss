@@ -1,6 +1,11 @@
 /* What we do? */
 
-
+.work {
+    @media not screen and (min-width: 1200px) {
+        display: none;
+    }
+   
+}
 .work-title {
     font-size: 36px;
     line-height: 1.17;

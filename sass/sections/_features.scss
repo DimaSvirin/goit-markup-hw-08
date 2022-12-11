@@ -1,6 +1,8 @@
 /* features */
 .features {
-    // padding-bottom: 0;
+    @include desktop {
+        padding-bottom: 0;
+    }
 }
 
 .features__list {
