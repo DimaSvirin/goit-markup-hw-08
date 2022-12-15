@@ -22,6 +22,9 @@
     color: var(--color-white);
 
     margin-bottom: 20px;
+    @include desktop {
+        display: flex;
+    }
 }
 
 /* FOOTER FORM */

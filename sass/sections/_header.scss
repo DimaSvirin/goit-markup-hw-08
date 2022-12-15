@@ -28,6 +28,9 @@
 
 .header__nav {
     @include df-aic;
+    @media screen and (max-width: 767px) {
+        height: 60px;
+    }
 }
 
 .menu {
@@ -83,22 +86,26 @@
     transform: scaleX(1.2);
 
 }
-
 .contacts {
     display: none;
-    
-
     @include tablet {
         display: flex;
-        flex-wrap: wrap;
+        margin-left: auto;        
+    }
+    
+}
+.contacts__list {
+    display: none;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
         row-gap: 10px;
-        margin-left: auto;
     }
     @include desktop {
-        display: flex;
-    }
+    flex-direction: row;    
 }
 
+}
 .contacts__item:not(:last-child) {
     @include desktop {
         margin-right: 30px;
@@ -112,7 +119,7 @@
 
 .contacts__link {
     @include df-aic;
-
+    gap: 8px;
     
     @include desktop {
         padding-top: 32px;
@@ -134,3 +141,18 @@
         color: var(--active-color);
     }
 }
+
+.mob-menu__btn--open {
+    @include df-aic;
+    justify-content: center;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    @include tablet {
+        display: none;
+    }
+}
+
+.mob-menu__icon--open {}

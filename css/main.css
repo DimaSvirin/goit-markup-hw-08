@@ -373,6 +373,11 @@ a {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .header__nav {
+    height: 60px;
+  }
+}
 
 .menu {
   display: none;
@@ -426,14 +431,23 @@ a {
 @media screen and (min-width: 768px) {
   .contacts {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 10px;
     margin-left: auto;
   }
 }
-@media screen and (min-width: 1200px) {
-  .contacts {
+
+.contacts__list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts__list {
     display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    flex-direction: row;
   }
 }
 
@@ -451,6 +465,7 @@ a {
 .contacts__link {
   display: flex;
   align-items: center;
+  gap: 8px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -467,6 +482,22 @@ a {
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--active-color);
+}
+
+.mob-menu__btn--open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu__btn--open {
+    display: none;
+  }
 }
 
 /* HERO SECTION */
@@ -923,6 +954,11 @@ a {
   text-transform: uppercase;
   color: var(--color-white);
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-form-title {
+    display: flex;
+  }
 }
 
 /* FOOTER FORM */
