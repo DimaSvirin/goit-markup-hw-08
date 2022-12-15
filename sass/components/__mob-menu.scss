@@ -1,6 +1,36 @@
-.mob-menu__backdrop {}
+.mob-menu {
+    position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-white);
+        padding: 48px 40px;
 
-.mob-menu__btn--close {}
+        @include tablet {
+            display: none;
+        }
+}
+
+.mob-menu__btn--close {
+    @include df-aic;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    background-color: transparent;
+    border: none;
+    
+    transition: fill var(--transition-d-tf);
+    
+    &:hover,
+    &:focus {
+        fill: var(--active-color);
+    }
+
+}
 
 .mob-menu__btn-icon {}
 

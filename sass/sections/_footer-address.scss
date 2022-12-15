@@ -16,6 +16,9 @@
 .address {
     text-align: center;
     margin-bottom: 60px;
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .footer .logo {
