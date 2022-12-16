@@ -2,11 +2,16 @@
 .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: calc(30/20);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color);
     margin-bottom: 12px;
+    @include desktop {
+        font-size: 20px;
+        line-height: 1.15;
+    }
+
 }
 
 .modal-form {
@@ -85,9 +90,13 @@
 .modal-comment,
 .modal-comment::placeholder {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
+    font-size: 14px;
+    line-height: calc(16/14);
     letter-spacing: 0.01em;
+    @include desktop {
+        font-size: 12px;
+        line-height: 1.17;
+    }
 }
 
 .modal-comment::placeholder {
@@ -107,10 +116,15 @@
 .check-label {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: calc(14/12);
     letter-spacing: 0.03em;
     color: var(--main-text-color);
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .check-label span {

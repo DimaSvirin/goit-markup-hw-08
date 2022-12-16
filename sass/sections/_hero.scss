@@ -1,15 +1,36 @@
 /* HERO SECTION */
 
 .hero {
-    max-width: 1600px;
+    max-width: 100%;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/bgimage.jpg);
+        url(../../images/bgimage-mob.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     padding-top: 118px;
     padding-bottom: 118px;
-    
-    @include desktop {
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/bgimage-mob-2x.jpg);
+    }
+    @include mobile {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../../images/bgimage-tab.jpg);
+            @include retina {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(/../images/bgimage-tab-2x.jpg);
+                }
+    }
+    @include tablet {
+        max-width: 1600px;
         padding-top: 200px;
         padding-bottom: 200px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/bgimage.jpg);
+            @include retina {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../../images/bgimage-2x.jpg);
+                }
     }
     margin: 0 auto;
 }

@@ -12,13 +12,9 @@
 }
 
 .modal {
-    min-width: 450px;
-    min-height: 609px;
-
-    @include desktop {
-        min-width: 528px;
-        min-height: 581px;
-    }
+    min-width: 320px;
+    height: auto;
+    
     background-color: var(--color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -29,6 +25,16 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--transition-d-tf);
+    @include mobile {
+            width: 450px;
+            min-height: 609px;
+        }
+    
+    
+        @include desktop {
+            width: 528px;
+            min-height: 581px;
+        }
 }
 
 .backdrop.is-hidden .modal {
