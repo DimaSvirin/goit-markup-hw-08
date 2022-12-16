@@ -1,8 +1,9 @@
 .mob-menu {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     position: fixed;
     top: 0;
+    z-index: 1;
         width: 100%;
         height: 100%;
         background-color: var(--color-white);
@@ -10,6 +11,13 @@
 
         @include tablet {
             display: none;
+        }
+        > .container {
+            height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: auto;
         }
 }
 
@@ -37,9 +45,9 @@
 
 .mob-menu__btn-icon {}
 
-.mob-menu__nav {
-   display: flex;
-}
+// .mob-menu__nav {
+//    display: flex;
+// }
 
 .mob-menu__list {}
 
@@ -104,12 +112,14 @@
 
 .mob-menu__soc {
     @include df-aic;
-    gap: 20px;
 }
 
 .mob-menu__soc__item {
     display: block;
-    &::after {
+        &:not(:last-child)::after {
+        content: '';
+        margin-left: 10px;
+        margin-right: 10px;
             height: 1px;
             width: 22px;
             border: 1px solid rgba(33, 33, 33, 0.2);
@@ -122,6 +132,4 @@
         line-height: calc(22/18);
         letter-spacing: 0.02em;
         color: var(--active-color);
-
-        
 }

@@ -23,6 +23,10 @@ button {
   cursor: pointer;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -43,6 +47,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 address {
@@ -124,10 +129,9 @@ a {
 }
 
 .mob-menu {
-  display: flex;
-  flex-wrap: wrap;
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-color: var(--color-white);
@@ -137,6 +141,13 @@ a {
   .mob-menu {
     display: none;
   }
+}
+.mob-menu > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
 }
 
 .mob-menu__btn--close {
@@ -155,10 +166,6 @@ a {
 }
 .mob-menu__btn--close:hover, .mob-menu__btn--close:focus {
   fill: var(--active-color);
-}
-
-.mob-menu__nav {
-  display: flex;
 }
 
 .mob-menu__item {
@@ -218,13 +225,15 @@ a {
 .mob-menu__soc {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
 .mob-menu__soc__item {
   display: block;
 }
-.mob-menu__soc__item::after {
+.mob-menu__soc__item:not(:last-child)::after {
+  content: "";
+  margin-left: 10px;
+  margin-right: 10px;
   height: 1px;
   width: 22px;
   border: 1px solid rgba(33, 33, 33, 0.2);
