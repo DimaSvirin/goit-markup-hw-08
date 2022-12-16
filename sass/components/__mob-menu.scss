@@ -1,6 +1,8 @@
 .mob-menu {
+    display: flex;
+    flex-wrap: wrap;
     position: fixed;
-        top: 0;
+    top: 0;
         width: 100%;
         height: 100%;
         background-color: var(--color-white);
@@ -19,6 +21,7 @@
     position: absolute;
     right: 15px;
     top: 10px;
+    z-index: 1;
 
     background-color: transparent;
     border: none;
@@ -34,22 +37,91 @@
 
 .mob-menu__btn-icon {}
 
+.mob-menu__nav {
+   display: flex;
+}
+
 .mob-menu__list {}
 
-.mob-menu__item {}
+.mob-menu__item {
+    margin-bottom: 36px;
+}
 
-.mob-menu__link {}
+.mob-menu__link {
+    font-weight: 500;
+        font-size: 40px;
+        line-height: calc(47/40);
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: var(--title-color);
 
-.current {}
+        
+            &:hover,
+            &:focus {
+                color: var(--active-color);
+            }
+        
+}
 
-.menu__item {}
+.mob-menu__link.current {
+    color: var(--active-color);
+}
 
-.mob-menu__contacts {}
+.mob-menu__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+.mob-menu__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
 
-.mob-menu__contacts__item {}
+.mob-menu__contacts__item:not(:last-child) {
+    margin-bottom: 32px;
+}
 
-.contacts__link {}
+.contacts__link {
+    font-weight: 500;   
+        letter-spacing: 0.02em;
+        
+        &.tel {
+            font-size: 34px;
+            line-height: calc(40/34);
+            color: var(--active-color);
+        }
+        &.mail {
+            font-size: 24px;
+            line-height: calc(28/24);
+            color: var(--main-text-color);
+        }
+        &:hover,
+        &:focus {
+            color: var(--active-color);
+        }
+}
 
-.mob-menu__soc {}
+.mob-menu__soc {
+    @include df-aic;
+    gap: 20px;
+}
 
-.mob-menu__soc__item {}
+.mob-menu__soc__item {
+    display: block;
+    &::after {
+            height: 1px;
+            width: 22px;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            transform: rotate(90deg);
+        }
+}
+.mob-menu__soc__link {
+    font-weight: 500;
+        font-size: 18px;
+        line-height: calc(22/18);
+        letter-spacing: 0.02em;
+        color: var(--active-color);
+
+        
+}
