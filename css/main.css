@@ -1291,18 +1291,36 @@ a {
 }
 
 /* CARDS */
-.cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+@media screen and (min-width: 768px) {
+  .cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .card-item {
-  width: 370px;
-  flex-basis: calc(33.3333333333% - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 450px;
+}
+.card-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .card-item {
+    width: 354px;
+    flex-basis: calc(50% - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-item {
+    width: 370px;
+    flex-basis: calc(33.3333333333% - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }
 
 .card-thumb {
@@ -1317,7 +1335,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(100%);
   transition: transform var(--transition-d-tf);
   font-size: 18px;
@@ -1325,6 +1343,16 @@ a {
   letter-spacing: 0.03em;
   color: var(--color-white);
   background-color: rgba(33, 150, 243, 0.9);
+}
+@media screen and (min-width: 768px) {
+  .card-text {
+    padding: 49px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-text {
+    padding: 63px 24px;
+  }
 }
 .card-link:hover .card-text, .card-link:focus .card-text {
   transform: translateY(0);
