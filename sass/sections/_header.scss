@@ -121,18 +121,18 @@
     @include df-aic;
     gap: 8px;
     
-    @include desktop {
-        padding-top: 32px;
-        padding-bottom: 32px;
-        gap: 10px;
-    }
-    
-
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: calc(14/12);
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+    @include desktop {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            gap: 10px;
+            font-size: 14px;
+            line-height: 1.14;
+        }
 
     transition: color var(--transition-d-tf);
 

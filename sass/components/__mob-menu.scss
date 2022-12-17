@@ -89,25 +89,32 @@
     font-weight: 500;   
         letter-spacing: 0.02em;
         
-        transition: color var(--transition-d-tf);
+        
         &.tel {
-            font-size: 34px;
-            line-height: calc(40/34);
+            font-size: 24px;
+            line-height: calc(28/24);
             color: var(--active-color);
+            @include mobile {
+                font-size: 34px;
+                line-height: calc(40/34);
+            }
         }
         &.mail {
             font-size: 24px;
             line-height: calc(28/24);
             color: var(--main-text-color);
-        }
-        &:hover,
-        &:focus {
-            color: var(--active-color);
+            transition: color var(--transition-d-tf);
+            &:hover,
+            &:focus {
+                color: var(--active-color);
+            }
         }
 }
 
 .mob-menu__soc {
     @include df-aic;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .mob-menu__soc__item {
